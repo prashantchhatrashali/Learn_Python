@@ -23,7 +23,7 @@ class AmarisoftUESimulator:
         # Setup logging
         logging.basicConfig(
             level=getattr(logging, log_level),
-            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'f
         )
         self.logger = logging.getLogger("AmarisoftUESim")
 
