@@ -1,35 +1,46 @@
-class NumberCollection:
-    def __init__(self, numbers):
-        self.numbers = numbers
-        self.even_numbers = []
-        self.odd_numbers = []
-        self._categorize_numbers()
+# Simple To-Do List Manager
 
-    def _categorize_numbers(self):
-        for num in self.numbers:
-            if num % 2 == 0:
-                self.even_numbers.append(num)
-            else:
-                self.odd_numbers.append(num)
+def display_menu():
+    """Display the menu options to the user."""
+    print("\n===== To-Do List Manager =====")
+    print("1. Add a task")
+    print("2. View all tasks")
+    print("3. Mark a task as complete")
+    print("4. Exit")
+    print("=============================")
 
-    def sum_all(self):
-        return sum(self.numbers)
 
-    def sum_even(self):
-        return sum(self.even_numbers)
+def add_task(todo_list):
+    """Add a new task to the to-do list."""
+    task = input("Enter a new task: ")
+    # TODO: Add the task to the todo_list with a "Not completed" status
 
-    def sum_odd(self):
-        return sum(self.odd_numbers)
 
-    def display_info(self):
-        print(f"Original numbers: {self.numbers}")
-        print(f"Even numbers: {self.even_numbers}")
-        print(f"Odd numbers: {self.odd_numbers}")
-        print(f"Sum of all numbers: {self.sum_all()}")
-        print(f"Sum of even numbers: {self.sum_even()}")
-        print(f"Sum of odd numbers: {self.sum_odd()}")
+def view_tasks(todo_list):
+    """Display all tasks with their status."""
+    # TODO: Display all tasks with their numbers and completion status
+    # If there are no tasks, print a message saying so
 
-my_collection = NumberCollection([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
-# Display information about the collection
-my_collection.display_info()
+def mark_complete(todo_list):
+    """Mark a task as complete."""
+    # TODO: Ask the user for the task number to mark as complete
+    # Update the task's status to "Completed"
+    # Handle cases where the user enters an invalid task number
+
+
+def main():
+    """Main program loop."""
+    todo_list = []  # List to store tasks
+
+    while True:
+        display_menu()
+        choice = input("Enter your choice (1-4): ")
+
+        # TODO: Implement the logic for each menu option
+        # Call the appropriate function based on the user's choice
+        # Exit the loop if the user chooses option 4
+
+
+if __name__ == "__main__":
+    main()

@@ -24,3 +24,5 @@ student1 = Student("Bob", 16, "10th")
 print(person1.greet())  # Output: Hello, my name is Alice and I am 30 years old.
 print(student1.greet())  # Output: Hello, my name is Bob and I am 16 years old.
 print(student1.study())  # Output: Bob is studying for grade 10th.
+
+
