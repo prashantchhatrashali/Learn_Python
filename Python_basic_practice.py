@@ -7,19 +7,25 @@
 
 import time
 
-from python_basic_1 import attempts
+#from python_basic_1 import attempts
 
 balance=100
 pin=1234
-attempt=0
+attempts=3
 input_pin = int(input("Please enter the PIN number: "))
 #PIN Handling
-for attempt in range(3):
-    attempt+=1
-    if input_pin==pin:
-        break
+while attempts > 0:
+    input_pin = input("Please enter the PIN number: ")
+
+    if input_pin.isdigit() and int(input_pin) == pin:
+        break  # PIN is correct, proceed to transactions
     else:
-        print("Wrong PIN in Three Attempts.")
+        attempts -= 1
+        print(f"Incorrect PIN! Attempts left: {attempts}")
+
+if attempts == 0:
+    print("Too many incorrect attempts. Exiting...")
+    exit()
 
 while True:
         if pin == input_pin:

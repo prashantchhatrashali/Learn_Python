@@ -1,4 +1,6 @@
 
+city=["gwalior", "indore", "merrut", "Delhi", "Goa"]
 
-def organize_downloads(download_dir):
-    print(f"Organizing downloads in: {download_dir}")
+result=sorted(city, key= lambda x: len(x), reverse=True)
+print(result)
+
